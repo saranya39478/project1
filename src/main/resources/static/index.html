@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever With You ❤️</title>
+    <script>
+        if (/^\/share\/[A-Za-z0-9_-]{43}$/.test(window.location.pathname)) {
+            document.documentElement.classList.add("share-page");
+        }
+    </script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="hearts"></div>
+
+    <main id="passwordGate" class="card" hidden>
+        <div class="heart">🔒</div>
+        <p class="tag">A PRIVATE MESSAGE</p>
+        <h1>Just for you</h1>
+        <p class="subtitle">Enter the password the sender gave you to open this link.</p>
+        <form id="unlockForm">
+            <input
+                type="password"
+                id="sharePassword"
+                placeholder="Password"
+                maxlength="128"
+                autocomplete="current-password"
+                required
+            >
+            <button type="submit">Open My Message 💌</button>
+        </form>
+        <p id="unlockStatus" aria-live="polite"></p>
+    </main>
+
+    <main id="mainContent" class="card">
+        <div class="heart">❤️</div>
+        <p class="tag">A LITTLE MESSAGE FOR YOU</p>
+        <h1>Hey, My Love!</h1>
+        <p class="subtitle">You make my world beautiful ✨</p>
+
+        <button id="surpriseBtn" type="button">Open My Surprise 💌</button>
+        <p id="surpriseMessage" class="surprise"></p>
+
+        <div class="divider"></div>
+
+        <section id="createShareSection">
+        <h2>Create a Password-Protected Message 💗</h2>
+        <form id="messageForm">
+            <input
+                type="text"
+                id="senderName"
+                placeholder="Your name"
+                maxlength="50"
+                required
+            >
+            <textarea
+                id="loveMessage"
+                placeholder="Write your special message..."
+                maxlength="1000"
+                required
+            ></textarea>
+            <input
+                type="password"
+                id="sharePasswordToSet"
+                placeholder="Choose a password (at least 8 characters)"
+                minlength="8"
+                maxlength="128"
+                autocomplete="new-password"
+                required
+            >
+            <button type="submit">Create Private Link 💕</button>
+        </form>
+
+        <p id="status" aria-live="polite"></p>
+        <div id="shareResult" hidden>
+            <p>Your private link is ready. Send the link and password separately.</p>
+            <input id="shareLink" type="url" readonly aria-label="Private message link">
+            <button id="copyShareLink" type="button">Copy Private Link</button>
+        </div>
+        </section>
+
+        <section id="messagesSection">
+        <h2>Messages From the Heart</h2>
+        <div id="messageList">Loading messages...</div>
+        </section>
+        <p class="footer">Made with love ❤️</p>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
