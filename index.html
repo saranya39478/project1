@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #6c42b8;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #6c42b8;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #4d2b8a;
+        }
+
+        footer {
+            margin-top: 25px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to My Website!</h1>
+
+        <p>
+            Hello! My website is working successfully.
+            Thank you for visiting.
+        </p>
+
+        <button onclick="showMessage()">
+            Click Here
+        </button>
+
+        <footer>
+            <p>Created with HTML, CSS and JavaScript</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Welcome! Your website is working successfully.");
+        }
+    </script>
+</body>
+</html>
